@@ -1,0 +1,17 @@
+Calculadora de CO2
+
+Responsavel pelos desenvolvedores
+Julho
+
+Vai ser responsavel pela estruturação do projeto
+
+Site base
+https://www.tjpr.jus.br/web/gestao-ambiental/calculadoraco2
+
+Com base nesse site vamos pegar os valores medios 
+de cada tipo de atividade e fazer um programa
+que tenha o mesmo comportamento
+
+Todos do grupo vai ser responsavel de criar
+pelo menos uma classe, sendo divulgada após a 
+estruturação

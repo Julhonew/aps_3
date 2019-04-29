@@ -1,0 +1,26 @@
+Calculadora de Co2
+
+Responsavel pela documentação
+Quem tiver interesse avisar
+
+O resposavel vai ficar encarregado de estruturar
+a documentação e cobrar as partes de cada um.
+
+Estrutura do trabalho:
+5.1. Capa: identificando o curso, o tema, a relação de alunos do grupo (nome/RA) (DOCUMENTADORES)
+5.2. Índice (DOCUMENTADORES)
+5.3. Objetivo do trabalho (DOCUMENTADORES)
+5.4. Introdução (DOCUMENTADORES)
+5.5.Elementos de programação Orientada a Objeto (conceitos gerais) (DESENVOLVEDORES)
+5.6. Dissertação: 
+     Modelagem e Relacionamento (conceitos gerais) (????)
+     Descrição dos módulos do sistema (DESENVOLVEDORES)
+5.7.Projeto (estrutura) do programa (DESENVOLVEDORES)
+5.8. Relatório com as linhas de código do programa (DESENVOLVEDORES)
+5.9.Apresentação do programa em funcionamento em um computador,
+apresentando todas as funcionalidades pedidas e extras. (DESENVOLVEDORES)
+5.10.Bibliografia (TODOS)
+5.11.Ficha de Atividades Práticas Supervisionadas (TODOS)
+
+Escolham as partes que tenham mais intimidade e mandem no grupo.
+
