@@ -1,5 +1,7 @@
 package calculadoraCo2;
 
+import.javax.swing.JOptionPane ;
+
 public class calculoArvores {
 
 	private double co2;
@@ -17,7 +19,7 @@ public class calculoArvores {
 		
 		double res = this.getCo2() * this.arvores; 
 		
-		return "Você precisa plantar " + res + " arvores";
+		return "VocÃª precisa plantar " + res + " arvores";
 	}
 	
 }
