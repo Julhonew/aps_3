@@ -1,7 +1,5 @@
 package calculadoraCo2;
 
-import.javax.swing.JOptionPane ;
-
 public class calculoArvores {
 
 	private double co2;
