@@ -1,5 +1,7 @@
 package calculadoraCo2;
 
+import.javax.swing.JOptionPane ;
+
 abstract class co2 {
 	
 	private double emissao, valor;
