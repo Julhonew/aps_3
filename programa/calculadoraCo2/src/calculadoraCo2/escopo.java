@@ -5,6 +5,17 @@ import javax.swing.JOptionPane ;
 public class escopo {
 
 	public static void main(String[] args) {
+	//* Abaixo declaramos a variavel de entrada de cada classe respectiva, todas int conforme a classe de cada 1 propõe.*/
+		
+		int entradai, entradabor, entradanat, entradalix, entradavd, entradave, entradagnv, entradagas, entradaviag ; 
+		
+	JOptionPane.showInputDialog("Qual o seu consumo mensal em KWH?");
+	consumoEnergia novoconsumo = new consumoEnergia(entradai,true);
+	novoconsumo.setco2(entradai)	
+	System.out.println(x.calculo());
+		
+		
+		
 		
 	/*
 	 * Preciso que você faça um quiz com as classe disponivel, dá uma olhada no site que esta na documentação
