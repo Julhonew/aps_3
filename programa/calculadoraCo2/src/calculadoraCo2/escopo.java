@@ -1,13 +1,15 @@
 package calculadoraCo2;
 
+import javax.swing.JOptionPane ;
+
 public class escopo {
 
 	public static void main(String[] args) {
 		
 	/*
-	 * Preciso que você faça um quiz com as classe disponivel, dá uma olhada no site que esta na documentação
-	 * joga o resultado de cada soma no metodo setCo2 que esta na classe calculoArvores, é essa classe que vai retornar
-	 * a quantidade de arvores que o usuario vai ter que plantar no metodo plantar(), qualquer duvida ou correção pode me 
+	 * Preciso que vocÃª faÃ§a um quiz com as classe disponivel, dÃ¡ uma olhada no site que esta na documentaÃ§Ã£o
+	 * joga o resultado de cada soma no metodo setCo2 que esta na classe calculoArvores, Ã© essa classe que vai retornar
+	 * a quantidade de arvores que o usuario vai ter que plantar no metodo plantar(), qualquer duvida ou correÃ§Ã£o pode me 
 	 * chamar.
 	 * 
 	 * */
