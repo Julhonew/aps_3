@@ -1,5 +1,4 @@
 package calculadoraCo2;
-
 import javax.swing.JOptionPane ;
 
 public class escopo {
@@ -8,13 +7,13 @@ public class escopo {
 	//* Abaixo declaramos a variavel de entrada de cada classe respectiva, todas int conforme a classe de cada 1 propõe.*/
 		
 		int entradai, entradabor, entradanat, entradalix, entradavd, entradave, entradagnv, entradagas, entradaviag ; 
+	
+	consumoEnergia consumo = new consumoEnergia(
+		JOptionPane.showInputDialog("Qual o seu consumo mensal em KWH?"),
+		true
+	);
 		
-	JOptionPane.showInputDialog("Qual o seu consumo mensal em KWH?");
-	consumoEnergia novoconsumo = new consumoEnergia(entradai,true);
-	novoconsumo.setco2(entradai)	
-	System.out.println(x.calculo());
-		
-		
+	setco2(consumo.calculo())	
 		
 		
 	/*
