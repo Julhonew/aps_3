@@ -15,7 +15,7 @@ public class calculoArvores {
 
 	public String plantar() {
 		
-		double res = this.getCo2() * this.arvores; 
+		double res = (12 * this.getCo2()) * this.arvores; 
 		
 		return "Você precisa plantar " + res + " arvores";
 	}
