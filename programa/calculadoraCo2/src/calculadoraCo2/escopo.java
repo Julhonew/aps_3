@@ -13,7 +13,25 @@ public class escopo {
 		true
 	);
 		
-	setco2(consumo.calculo())	
+		JOptionPane.showMessageDialog(null, "GLP - Gás Liquefeito de Petróleo Cada Botijão Contém 13Kg de GLP")
+			
+	consumogasBorijao consumo = new consumogasBorijao(
+		  JOptionPane.showInputDialog("Qual o seu consumo mensal de Gás de Cozinha em KG"),
+		  true, false
+		  );
+		
+		
+		JOptionPane.showMessageDialog(null, "Gás Natural (Gás de Encanamento)")
+		
+	consumogasNatural consumo = new consumogasNatural(
+		  JOptionPane.showInputDialog("Qual o seu consumo mensal de gás natural em M3"),
+		  true, false
+		  );
+		
+		
+		
+	setco2(consumo.calculo())
+		
 		
 		
 	/*
