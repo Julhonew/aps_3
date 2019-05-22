@@ -4,16 +4,18 @@ import javax.swing.JOptionPane ;
 public class escopo {
 
 	public static void main(String[] args) {
-	//* Abaixo declaramos a variavel de entrada de cada classe respectiva, todas int conforme a classe de cada 1 propõe.*/
-		
-		int entradai, entradabor, entradanat, entradalix, entradavd, entradave, entradagnv, entradagas, entradaviag ; 
+	//* Abaixo declaramos a variavel de entrada de cada classe respectiva, todas int conforme a classe de cada 1 propõe.*/ 
 	
+	calculoArvores x = new calculoArvores();
+		
 	consumoEnergia consumo = new consumoEnergia(
 		JOptionPane.showInputDialog("Qual o seu consumo mensal em KWH?"),
 		true
 	);
+	
+	x.setco2(consumo.calculo());
 		
-		JOptionPane.showMessageDialog(null, "GLP - Gás Liquefeito de Petróleo Cada Botijão Contém 13Kg de GLP")
+	JOptionPane.showMessageDialog(null, "GLP - Gás Liquefeito de Petróleo Cada Botijão Contém 13Kg de GLP")
 			
 	consumogasBorijao consumo = new consumogasBorijao(
 		  JOptionPane.showInputDialog("Qual o seu consumo mensal de Gás de Cozinha em KG"),
@@ -43,7 +45,7 @@ public class escopo {
                }
 		
 		
-	setco2(consumo.calculo())
+	
 		
 		
 		
