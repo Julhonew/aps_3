@@ -8,42 +8,35 @@ public class escopo {
 	
 	calculoArvores x = new calculoArvores();
 		
-	consumoEnergia consumo = new consumoEnergia(
-		JOptionPane.showInputDialog("Qual o seu consumo mensal em KWH?"),
-		true
-	);
+	           consumoEnergia consumo = new consumoEnergia(
+		   JOptionPane.showInputDialog("Qual o seu consumo mensal em KWH?"),
+	        	true
+	    );
 	
-	x.setco2(consumo.calculo());
+	           x.setco2(consumo.calculo());
 		
-	JOptionPane.showMessageDialog(null, "GLP - Gás Liquefeito de Petróleo Cada Botijão Contém 13Kg de GLP")
+	          System.out.println("GLP - Gás Liquefeito de Petróleo Cada Botijão Contém 13Kg de GLP");
 			
-	consumogasBorijao consumo = new consumogasBorijao(
-		  JOptionPane.showInputDialog("Qual o seu consumo mensal de Gás de Cozinha em KG"),
-		  true, false
-		  );
+	          JOptionPane.ShowInputDialog("Você utiliza Gás Liquefeito?\n 1 - Sim \n 2 - Não");
+		  x.setco2(consumo.calculo());
+	          consumogasBorijao  = new consumogasBorijao(2, true);
 		
 		
-		JOptionPane.showMessageDialog(null, "Gás Natural (Gás de Encanamento)")
-		
-	consumogasNatural consumo = new consumogasNatural(
+		  JOptionPane.showMessageDialog(null, "Gás Natural (Gás de Encanamento)")
+	          consumogasNatural consumo = new consumogasNatural(
 		  JOptionPane.showInputDialog("Qual o seu consumo mensal de gás natural em M3"),
-		  true, false
-		  );
+		  true, false);
+		  x.setco2(consumo.calculo());
 		
-        consumolixo consumo = new consumolixo(
+                  consumolixo consumo = new consumolixo(
 		  JOptionPane.showInputDialog("Qual o seu consumo diário de lixo (em quilos)"),
-		  true,
-		  );
+		  true,);
+	          x.setco2(consumo.calculo());
 		
-		x.setco2(consumo.calculo());
+		  JOptionPane.ShowInputDialog("Você utiliza Carro movido á Diesel?\n 1 - Sim \n 2 - Não");
+		  x.setco2(consumo.calculo());
+	          consumoveiculoDiesel  = new consumoveiculoDiesel(2, true);
 		
-		boolean 
-		ask = Boolean.parseBoolean(JOptionPane.showInputDialog("Você utiliza carro movido a disel?"));
-		
-		if(ask == sim) {
-                consumo = true;
-                }else { 
-                consumo = false;
                }
 		
 		
