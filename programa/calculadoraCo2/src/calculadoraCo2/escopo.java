@@ -28,6 +28,11 @@ public class escopo {
 		  true, false
 		  );
 		
+        consumolixo consumo = new consumolixo(
+		  JOptionPane.showInputDialog("Qual o seu consumo diário de lixo (em quilos)"),
+		  true,
+		  );
+		
 		
 		
 	setco2(consumo.calculo())
