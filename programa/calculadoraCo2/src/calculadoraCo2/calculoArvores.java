@@ -10,7 +10,7 @@ public class calculoArvores {
 	}
 
 	public void setCo2(double co2) {
-		this.co2 = co2;
+		this.co2 =+ co2;
 	}
 
 	public String plantar() {
