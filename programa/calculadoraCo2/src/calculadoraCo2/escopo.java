@@ -33,6 +33,14 @@ public class escopo {
 		  true,
 		  );
 		
+		boolean 
+		ask = Boolean.parseBoolean(JOptionPane.showInputDialog("Você utiliza carro movido a disel?"));
+		
+		if(ask == sim) {
+                consumo = true;
+                }else { 
+                consumo = false;
+               }
 		
 		
 	setco2(consumo.calculo())
