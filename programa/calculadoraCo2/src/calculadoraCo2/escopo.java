@@ -16,71 +16,87 @@ public class escopo {
 //		x.setCo2(energia.calculo());
 //
 //		gasBorijao botijao = new gasBorijao(
-//				JOptionPane.showInputDialog("Voc� ultiliza botij�o de gas de 13kg "
+//				JOptionPane.showInputDialog("Você ultiliza botijão de gas de 13kg "
 //						+ "\n1 - sim "
-//						+ "\n2 - n�o"
+//						+ "\n2 - não"
 //						)
 //		);
 //		x.setCo2(botijao.calculo());
 //
 		try {
-		opt = Integer.parseInt(JOptionPane.showInputDialog("Voc� utiliza G�s Natural?"
+		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Gás Natural?"
 		   		+ "\n1 - sim "
-		   		+ "\n2 - n�o"
+		   		+ "\n2 - não"
 			));
 		}catch (Exception e) {
 			opt = 3;
 		}
 		gasNatural gasN = new gasNatural(opt);				   
 		x.setCo2(gasN.resultado());
-
+		
+                //Gás de Botijão
+		
+		try {
+		opt = Integer.parseInt(JOptionPane.showInputDialog("Você ultiliza botijão de gas de 13kg?"
+		   		+ "\n1 - sim "
+		   		+ "\n2 - não"
+			));
+		}catch (Exception e) {
+			opt = 3;
+		}
+		gasBorijao gasB = new gasBorijao(opt);				   
+		x.setCo2(gasB.resultado());
+		
+		
+		
+		
 //
 //		lixo lixo1 = new lixo(
-//			JOptionPane.showInputDialog("Quannto de lixo voc� gera por dia em quilos ?"),
+//			JOptionPane.showInputDialog("Quannto de lixo você gera por dia em quilos ?"),
 //			 true
 //		 );
 //		x.setCo2(lixo1.calculo());
 //
 //
 //		veiculoDiesel veiculoD = new veiculoDiesel(
-//			JOptionPane.showInputDialog("Voc� utiliza Carro movido á Diesel?"
+//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ Diesel?"
 //							+ "\n1 - sim "
-//							+ "\n2 - n�o"
+//							+ "\n2 - não"
 //						)
 //		);				   
 //		x.setCo2(veiculoD.calculo());
 //
 //		veiculoEtanol veiculoE  = new veiculoEtanol(
-//			JOptionPane.showInputDialog("Voc� utiliza Carro movido á Etanol?"
+//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ Etanol?"
 //							+ "\n1 - sim "
-//							+ "\n2 - n�o"
+//							+ "\n2 - não"
 //						)
 //		);				   
 //		x.setCo2(veiculoE.calculo());
 //
 //
 //		veiculoGNV veiculoG = new veiculoGNV(
-//			JOptionPane.showInputDialog("Voc� utiliza Carro movido á GNV?"
+//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ GNV?"
 //							+ "\n1 - sim "
-//							+ "\n2 - n�o"
+//							+ "\n2 - não"
 //						)
 //		);				   
 //		x.setCo2(veiculoG.calculo());
 //
 //
 //		veiculoGasolina veiculoGA  = new veiculoGasolina(
-//			JOptionPane.showInputDialog("Voc� utiliza Carro movido á Gasolina?"
+//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ Gasolina?"
 //							+ "\n1 - sim "
-//							+ "\n2 - n�o"
+//							+ "\n2 - não"
 //						)
 //		);				   
 //		x.setCo2(veiculoGA.calculo());  
 //
 //
 //		viagens  viagem = new viagens(
-//			JOptionPane.showInputDialog("Voc� viajou recentemente?"
+//			JOptionPane.showInputDialog("Você viajou recentemente?"
 //						+ "\n1 - sim "
-//						+ "\n2 - n�o"
+//						+ "\n2 - não"
 //						)
 //		);				   
 //		x.setCo2(viagem.calculo());
