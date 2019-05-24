@@ -47,8 +47,57 @@ public class escopo {
 		gasBorijao gasB = new gasBorijao(opt);				   
 		x.setCo2(gasB.resultado());
 		
+		// Veiculo Diesel
 		
+		try {
+		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Carro movido a Diesel??"
+		   		+ "\n1 - sim "
+		   		+ "\n2 - não"
+			));
+		}catch (Exception e) {
+			opt = 3;
+		}
+		veiculoDiesel veiculoD = new veiculoD(opt);				   
+		x.setCo2(veiculoD.resultado());
 		
+	        // Veiculo Etanol
+		
+		try {
+		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Carro movido a Etanol?"
+		   		+ "\n1 - sim "
+		   		+ "\n2 - não"
+			));
+		}catch (Exception e) {
+			opt = 3;
+		}
+		veiculoEtanol veiculoE = new veiculoE(opt);				   
+		x.setCo2(veiculoE.resultado());
+		
+		// Veiculo GNV
+		
+		try {
+		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Carro movido a GNV?"
+		   		+ "\n1 - sim "
+		   		+ "\n2 - não"
+			));
+		}catch (Exception e) {
+			opt = 3;
+		}
+		veiculoGNV veiculoGN = new veiculoGN(opt);				   
+		x.setCo2(veiculoGN.resultado());
+		
+		// Veiculo Gasolina
+		
+		try {
+		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Carro movido a Gasolina?"
+		   		+ "\n1 - sim "
+		   		+ "\n2 - não"
+			));
+		}catch (Exception e) {
+			opt = 3;
+		}
+		veiculoGasolina veiculoG = new veiculoG(opt);				   
+		x.setCo2(veiculoG.resultado());
 		
 //
 //		lixo lixo1 = new lixo(
