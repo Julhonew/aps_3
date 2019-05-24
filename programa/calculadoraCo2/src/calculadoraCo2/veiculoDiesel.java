@@ -1,8 +1,8 @@
 package calculadoraCo2;
 
-public class veiculoDisel extends co2{
+public class veiculoDiesel extends co2{
 
-	public veiculoDisel (int valor, boolean verificar, int veiculo ) {
+	public veiculoDiesel (int valor, boolean verificar, int veiculo ) {
 		
 		double[] veiculos = {
 				3.091, // Carro

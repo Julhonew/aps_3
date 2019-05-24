@@ -4,81 +4,90 @@ import javax.swing.JOptionPane ;
 public class escopo {
 
 	public static void main(String[] args) { 
+		
+		int opt;
 	
-		calculoArvores x = new calculoArvores();
+		calculoArvores  x = new calculoArvores();
 
-		consumoEnergia energia = new consumoEnergia(
-			JOptionPane.showInputDialog("Qual o seu consumo mensal em KWH?"),
-			true
-		);
-		x.setco2(consumo.calculo());
+//		consumoEnergia energia = new consumoEnergia(
+//			JOptionPane.showInputDialog("Qual o seu consumo mensal em KWH?"),
+//			trued
+//		);
+//		x.setCo2(energia.calculo());
+//
+//		gasBorijao botijao = new gasBorijao(
+//				JOptionPane.showInputDialog("Você ultiliza botijão de gas de 13kg "
+//						+ "\n1 - sim "
+//						+ "\n2 - não"
+//						)
+//		);
+//		x.setCo2(botijao.calculo());
+//
+		try {
+		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Gás Natural?"
+		   		+ "\n1 - sim "
+		   		+ "\n2 - não"
+			));
+		}catch (Exception e) {
+			opt = 3;
+		}
+		gasNatural gasN = new gasNatural(opt);				   
+		x.setCo2(gasN.resultado());
 
-		consumogasBorijao botijao = new consumogasBorijao(
-			JOptionPane.ShowInputDialog("GLP - GÃ¡s Liquefeito de PetrÃ³leo Cada BotijÃ£o ContÃ©m 13Kg de GLP
-						    \nVocÃª utiliza GÃ¡s Liquefeito?
-						    \n1 - Sim 
-						    \n2 - NÃ£o"
-		);
-		x.setco2(botijao.calculo());
-
-
-		consumogasNatural  = new consumogasNatural(
-		       JOptionPane.ShowInputDialog("GÃ¡s Natural - GÃ¡s de Encanamento
-						   \nVocÃª utiliza GÃ¡s Natural?
-						   \n1 - Sim 
-						   \n2 - NÃ£o"
-		);				   
-		x.setco2(consumo.calculo());
-
-
-		consumolixo consumo = new consumolixo(
-			JOptionPane.showInputDialog("Qual o seu consumo diÃ¡rio de lixo em quilos ?"),
-			 true
-		 );
-		x.setco2(consumo.calculo());
-
-
-		consumoveiculoDiesel  = new consumoveiculoDiesel(
-			JOptionPane.ShowInputDialog("VocÃª utiliza Carro movido Ã¡ Diesel??
-						   \n1 - Sim 
-						   \n2 - NÃ£o"
-		);				   
-		x.setco2(consumo.calculo());
-
-		consumoveiculoEtanol  = new consumoveiculoEtanol(
-			JOptionPane.ShowInputDialog("VocÃª utiliza Carro movido Ã¡ Etanol??
-						   \n1 - Sim 
-						   \n2 - NÃ£o"
-		);				   
-		x.setco2(consumo.calculo());
-
-
-		consumoveiculoGNV  = new consumoveiculoGNV(
-			JOptionPane.ShowInputDialog("VocÃª utiliza Carro movido Ã¡ GNV??
-						   \n1 - Sim 
-						   \n2 - NÃ£o"
-		);				   
-		x.setco2(consumo.calculo());
-
-
-		consumoveiculoGasolina  = new consumoveiculoGasolina(
-			JOptionPane.ShowInputDialog("VocÃª utiliza Carro movido Ã¡ Gasolina??
-					   \n1 - Sim 
-					   \n2 - NÃ£o"
-		);				   
-		x.setco2(consumo.calculo());  
-
-
-		consumoviagens  = new consumoviagens(
-			JOptionPane.ShowInputDialog("VocÃª viajou recentemente?
-					   \n1 - Sim 
-					   \n2 - NÃ£o"
-		);				   
-		x.setco2(consumo.calculo());
+//
+//		lixo lixo1 = new lixo(
+//			JOptionPane.showInputDialog("Quannto de lixo você gera por dia em quilos ?"),
+//			 true
+//		 );
+//		x.setCo2(lixo1.calculo());
+//
+//
+//		veiculoDiesel veiculoD = new veiculoDiesel(
+//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ Diesel?"
+//							+ "\n1 - sim "
+//							+ "\n2 - não"
+//						)
+//		);				   
+//		x.setCo2(veiculoD.calculo());
+//
+//		veiculoEtanol veiculoE  = new veiculoEtanol(
+//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ Etanol?"
+//							+ "\n1 - sim "
+//							+ "\n2 - não"
+//						)
+//		);				   
+//		x.setCo2(veiculoE.calculo());
+//
+//
+//		veiculoGNV veiculoG = new veiculoGNV(
+//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ GNV?"
+//							+ "\n1 - sim "
+//							+ "\n2 - não"
+//						)
+//		);				   
+//		x.setCo2(veiculoG.calculo());
+//
+//
+//		veiculoGasolina veiculoGA  = new veiculoGasolina(
+//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ Gasolina?"
+//							+ "\n1 - sim "
+//							+ "\n2 - não"
+//						)
+//		);				   
+//		x.setCo2(veiculoGA.calculo());  
+//
+//
+//		viagens  viagem = new viagens(
+//			JOptionPane.showInputDialog("Você viajou recentemente?"
+//						+ "\n1 - sim "
+//						+ "\n2 - não"
+//						)
+//		);				   
+//		x.setCo2(viagem.calculo());
 
 
 
-		calculoArvores.plantar() ;
+		x.plantar() ;
 	
 	}
 	
