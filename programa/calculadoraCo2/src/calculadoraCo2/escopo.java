@@ -1,159 +1,43 @@
 package calculadoraCo2;
-import javax.swing.JOptionPane ;
+import javax.swing.JOptionPane;
 
 public class escopo {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) { 
 		
-		int opt;
+		Perguntas pergunta = new Perguntas();
+		Erros erro = new Erros();
+		
+//		String[] arrPergunta = pergunta.pergunta(i);
+		
+		for(int i = 0; i < 8; i++) {
+			String[] arrPergunta = pergunta.pergunta(i);
+			int cod = 0;
+			
+			try {
+				if(arrPergunta[1] != ""){
+					int p1 = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[0] + arrPergunta[3]));
+					if(p1 == 1) {
+						cod = 1;
+						int p2 = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[1]));
+						if(arrPergunta[2] != "" ) {
+							cod = 2;
+							int p3 = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[2]));
+						} 
+					}
+				}else{
+					int p1 = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[0]));
+				}
+			}catch(Exception e) {
+				if(arrPergunta[1] != ""){
+					erro.opcao2(i, true, cod);
+				}else {
+					erro.opcao2(i, false, cod);
+				}
+			}
 	
-		calculoArvores  x = new calculoArvores();
-
-//		consumoEnergia energia = new consumoEnergia(
-//			JOptionPane.showInputDialog("Qual o seu consumo mensal em KWH?"),
-//			trued
-//		);
-//		x.setCo2(energia.calculo());
-//
-//		gasBorijao botijao = new gasBorijao(
-//				JOptionPane.showInputDialog("Você ultiliza botijão de gas de 13kg "
-//						+ "\n1 - sim "
-//						+ "\n2 - não"
-//						)
-//		);
-//		x.setCo2(botijao.calculo());
-//
-		try {
-		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Gás Natural?"
-		   		+ "\n1 - sim "
-		   		+ "\n2 - não"
-			));
-		}catch (Exception e) {
-			opt = 3;
 		}
-		gasNatural gasN = new gasNatural(opt);				   
-		x.setCo2(gasN.resultado());
 		
-                //Gás de Botijão
-		
-		try {
-		opt = Integer.parseInt(JOptionPane.showInputDialog("Você ultiliza botijão de gas de 13kg?"
-		   		+ "\n1 - sim "
-		   		+ "\n2 - não"
-			));
-		}catch (Exception e) {
-			opt = 3;
-		}
-		gasBorijao gasB = new gasBorijao(opt);				   
-		x.setCo2(gasB.resultado());
-		
-		// Veiculo Diesel
-		
-		try {
-		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Carro movido a Diesel??"
-		   		+ "\n1 - sim "
-		   		+ "\n2 - não"
-			));
-		}catch (Exception e) {
-			opt = 3;
-		}
-		veiculoDiesel veiculoD = new veiculoD(opt);				   
-		x.setCo2(veiculoD.resultado());
-		
-	        // Veiculo Etanol
-		
-		try {
-		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Carro movido a Etanol?"
-		   		+ "\n1 - sim "
-		   		+ "\n2 - não"
-			));
-		}catch (Exception e) {
-			opt = 3;
-		}
-		veiculoEtanol veiculoE = new veiculoE(opt);				   
-		x.setCo2(veiculoE.resultado());
-		
-		// Veiculo GNV
-		
-		try {
-		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Carro movido a GNV?"
-		   		+ "\n1 - sim "
-		   		+ "\n2 - não"
-			));
-		}catch (Exception e) {
-			opt = 3;
-		}
-		veiculoGNV veiculoGN = new veiculoGN(opt);				   
-		x.setCo2(veiculoGN.resultado());
-		
-		// Veiculo Gasolina
-		
-		try {
-		opt = Integer.parseInt(JOptionPane.showInputDialog("Você utiliza Carro movido a Gasolina?"
-		   		+ "\n1 - sim "
-		   		+ "\n2 - não"
-			));
-		}catch (Exception e) {
-			opt = 3;
-		}
-		veiculoGasolina veiculoG = new veiculoG(opt);				   
-		x.setCo2(veiculoG.resultado());
-		
-//
-//		lixo lixo1 = new lixo(
-//			JOptionPane.showInputDialog("Quannto de lixo você gera por dia em quilos ?"),
-//			 true
-//		 );
-//		x.setCo2(lixo1.calculo());
-//
-//
-//		veiculoDiesel veiculoD = new veiculoDiesel(
-//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ Diesel?"
-//							+ "\n1 - sim "
-//							+ "\n2 - não"
-//						)
-//		);				   
-//		x.setCo2(veiculoD.calculo());
-//
-//		veiculoEtanol veiculoE  = new veiculoEtanol(
-//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ Etanol?"
-//							+ "\n1 - sim "
-//							+ "\n2 - não"
-//						)
-//		);				   
-//		x.setCo2(veiculoE.calculo());
-//
-//
-//		veiculoGNV veiculoG = new veiculoGNV(
-//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ GNV?"
-//							+ "\n1 - sim "
-//							+ "\n2 - não"
-//						)
-//		);				   
-//		x.setCo2(veiculoG.calculo());
-//
-//
-//		veiculoGasolina veiculoGA  = new veiculoGasolina(
-//			JOptionPane.showInputDialog("Você utiliza Carro movido Ã¡ Gasolina?"
-//							+ "\n1 - sim "
-//							+ "\n2 - não"
-//						)
-//		);				   
-//		x.setCo2(veiculoGA.calculo());  
-//
-//
-//		viagens  viagem = new viagens(
-//			JOptionPane.showInputDialog("Você viajou recentemente?"
-//						+ "\n1 - sim "
-//						+ "\n2 - não"
-//						)
-//		);				   
-//		x.setCo2(viagem.calculo());
-
-
-
-		x.plantar() ;
-	
 	}
-	
 }
