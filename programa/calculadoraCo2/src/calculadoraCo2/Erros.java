@@ -6,14 +6,26 @@ public class Erros {
 
 	@SuppressWarnings("unused")
 	public void opcao2(int p, boolean opt, int cod) {
+		// instancia o metodo de calculo de co2
 		calculoCo2 calculo = new calculoCo2();
-		Perguntas pergunta = new Perguntas();
-		String[] arrPergunta = pergunta.pergunta(p);
-		co2 c = new co2();
-		double [][] arrCo2 = c.getArrCo2();
-		int tamanho = arrCo2[p].length;
 		
+		// instancia o array de perguntas 
+		Perguntas pergunta = new Perguntas();
+		
+		// instacia o array de valores co2
+		co2 c = new co2();
+		
+		// recebe o retorno da pergunta requirida do array
+		String[] arrPergunta = pergunta.pergunta(p);
+		
+		// instacia a classe que faz o retorno do tamanho do array de co2 requerido
+		verificaArr arrCo2 = new verificaArr();
+		//recebe o tamanho do array requerido
+		int tamanho = arrCo2.verificaArray(p);
+		
+		// recebe o tamanho do array perguntas
 		int count = this.verficaArr(arrPergunta);
+		
 		
 		boolean verificador = false;
 		int opcao = 0;
@@ -21,7 +33,6 @@ public class Erros {
 		int valor = 0;
 		boolean alerta = false;
 		String mensagem;
-		
 		
 		if(count == 1){
 			System.out.println(arrPergunta[1]);
