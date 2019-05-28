@@ -1,6 +1,7 @@
 package calculadoraCo2;
 import javax.swing.JOptionPane;
 
+@SuppressWarnings("unused")
 public class escopo {
 
 	@SuppressWarnings("unused")
@@ -26,17 +27,23 @@ public class escopo {
 					valor = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[0]));
 				}else if(tamanho == 2){
 					opcao = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[0] + arrPergunta[3]));
+					if(opcao == 2) {
+						continue;
+					}
 					cod = 1;
-					valor  = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[1] + arrPergunta[3]));
+					valor  = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[1]));
 				}else{
 					opcao = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[0] + arrPergunta[3]));
+					if(opcao == 2) {
+						continue;
+					}
 					cod = 1;
 					tipo = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[1]));
 					cod = 2;
 					valor = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[2]));
 				}
 				
-				calculo.co2(valor, tipo, i);
+				System.out.println(calculo.co2(valor, tipo, i));
 					
 			}catch(Exception e) {
 				if(tamanho == 1){

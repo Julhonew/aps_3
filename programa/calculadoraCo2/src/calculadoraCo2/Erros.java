@@ -107,7 +107,7 @@ public class Erros {
 			}
 		}
 		
-		calculo.co2(valor, tipo, p);
+		System.out.println(calculo.co2(valor, tipo, p));
 	}
 	
 	

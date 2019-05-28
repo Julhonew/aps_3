@@ -1,14 +1,21 @@
 package calculadoraCo2;
 
 public class calculoCo2 {
+	public int tipo;
 	
-	public double co2 (int val, int tipo, int pergunta) {
+	@SuppressWarnings("unused")
+	public double co2 (int valor, int tipo, int pergunta) {
+		if(tipo > 1){
+			this.tipo = tipo - 1;
+		}
+		System.out.println(valor + "\n" + tipo + "\n" + pergunta);
 		
-		co2 valor = new co2();
+		co2 c = new co2();
+		Double resultado;
 		
+		Double[] arrCo2 = c.getArrCo2(pergunta); 
 		
-		
-		int resultado = 0;
+		resultado = arrCo2[this.tipo] * valor;
 		
 		return resultado;
 	}
