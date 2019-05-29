@@ -50,7 +50,11 @@ public class Erros {
 					if(cod == 0) {
 						if(opcao == 0){
 							opcao = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[4] + arrPergunta[0] + arrPergunta[3]));
-						}
+							if(opcao > 2 || opcao <= 0){
+								opcao = 0;
+								throw new Exception();
+							}
+						} 
 						if(opcao == 1) {
 							mensagem = (alerta) ? arrPergunta[4] : "";
 							valor = Integer.parseInt(JOptionPane.showInputDialog(mensagem + arrPergunta[1]));
@@ -72,11 +76,21 @@ public class Erros {
 					if(cod == 0) {
 						if(opcao == 0){
 							opcao = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[4] + arrPergunta[0] + arrPergunta[3]));
+							if(opcao > 2 || opcao <= 0){
+								opcao = 0;
+								throw new Exception();
+							}
 						}
+						
 						if(opcao == 1) {
 							mensagem = (alerta) ? arrPergunta[4] : "";
 							if(tipo == 0) {
 								tipo = Integer.parseInt(JOptionPane.showInputDialog(mensagem + arrPergunta[1]));
+								if(tipo == 5){
+									cod = 1;
+									tipo = 0;
+									throw new Exception();
+								}
 							}
 							if(verificador == false && tipo <= tamanho && tipo > 0) {
 								mensagem = (alerta) ? arrPergunta[4] : "";
@@ -89,6 +103,11 @@ public class Erros {
 					}else if(cod == 1) {
 						if(tipo == 0) {
 							tipo = Integer.parseInt(JOptionPane.showInputDialog(arrPergunta[4] + arrPergunta[1]));
+							if(tipo == 5){
+								cod = 1;
+								tipo = 0;
+								throw new Exception();
+							}
 						}
 						if(verificador == false && tipo <= tamanho && tipo > 0) {
 							mensagem = (alerta) ? arrPergunta[4] : "";
@@ -107,7 +126,7 @@ public class Erros {
 			}
 		}
 		
-		System.out.println(calculo.co2(valor, tipo, p));
+		calculo.co2(valor, tipo, p);
 	}
 	
 	

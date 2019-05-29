@@ -3,7 +3,6 @@ package calculadoraCo2;
 public class calculoArvores {
 
 	private double co2;
-	protected double arvores = 7.14;
 
 	public double getCo2() {
 		return co2;
@@ -15,9 +14,10 @@ public class calculoArvores {
 
 	public String plantar() {
 		
-		double res = (12 * this.getCo2()) * this.arvores; 
+		double ano = (12 * this.getCo2()) * 7.14; 
+		double mes = this.getCo2() * 7.14;
 		
-		return "VocÃª precisa plantar " + res + " arvores";
+		return "Você precisa plantar " + mes + " arvores por mês com a emissão atual \n ou " + ano + " no periodo de um ano";
 	}
 	
 }
